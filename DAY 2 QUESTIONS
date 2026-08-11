@@ -1,0 +1,36 @@
+QUESTION-3 Write a program to calculate the area and perimeter of a rectangle given its length and breadth.
+#include <stdio.h>
+
+int main() {
+    float length, breadth, area, perimeter;
+
+    printf("Enter length: ");
+    scanf("%f", &length);
+
+    printf("Enter breadth: ");
+    scanf("%f", &breadth);
+
+    area = length * breadth;
+    perimeter = 2 * (length + breadth);
+
+    printf("area of rectangle is %f", area);
+    printf("perimeter of rectangle is %f", perimeter);
+
+    return 0;
+}
+
+QUESTION-4 Write a program to calculate the area and circumference of a circle given its radius.
+#include<stdio.h>
+
+int main()
+{
+    float r,c,a;
+
+    scanf("%f",& r);
+    a=3.14*r*r;
+    c=2*3.14*r;
+    printf("Area of circle: %0.4f\n",a);
+    printf("circumference of circle: %0.4f\n",c);
+
+    return 0;
+}
