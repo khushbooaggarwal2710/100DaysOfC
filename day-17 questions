@@ -1,0 +1,50 @@
+ques-33 Write a program to check if a number is an Armstrong number.
+
+#include<stdio.h>
+int main(void)
+{
+    int n,original,d,sum=0;
+    
+    printf("enter a number");
+    scanf("%d",&n);
+    
+    original=n;
+    
+    while(n!=0)
+    {
+        d=n%10;
+        sum=sum+d*d*d;
+        n=n/10;
+    }
+    
+    if(sum==original)
+    {
+        printf("Armstrong number");
+    }
+    else
+    {
+        printf("Not an sramstrong number");
+    }
+    
+    return 0;
+}
+
+ques-34 Write a program to check if a number is prime.
+
+#include<stdio.h>
+int main(void)
+{
+    int x,n;
+    printf("enter number to be checked");
+    scanf("%d",&x);
+    for(n=2; n<=10; n++)
+    {
+        if(x%n==0)
+        {
+            printf("%d is not prime number",x);
+            break;
+        }
+    }
+    
+    return 0;
+}
