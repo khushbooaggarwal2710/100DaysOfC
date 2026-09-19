@@ -1,0 +1,47 @@
+Q71: Read and print a matrix.
+
+#include <stdio.h>
+
+int main(void)
+{
+    int a[10][10], rows, columns;
+
+    scanf("%d %d", &rows, &columns);
+
+    for (int i = 0; i < rows; i++)
+        for (int j = 0; j < columns; j++)
+            scanf("%d", &a[i][j]);
+
+    for (int i = 0; i < rows; i++)
+    {
+        for (int j = 0; j < columns; j++)
+            printf("%d ", a[i][j]);
+        printf("\n");
+    }
+
+    return 0;
+}  
+
+Q72: Find the sum of all elements in a matrix.
+
+#include <stdio.h>
+
+int main(void)
+{
+    int a[10][10], rows, columns, sum = 0;
+
+    scanf("%d %d", &rows, &columns);
+
+    for (int i = 0; i < rows; i++) 
+    {
+        for (int j = 0; j < columns; j++) 
+        {
+            scanf("%d", &a[i][j]);
+            sum += a[i][j];
+        }
+    }
+
+    printf("Sum = %d", sum);
+
+    return 0;
+}  
