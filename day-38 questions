@@ -1,0 +1,55 @@
+Q75: Add two matrices.
+
+#include <stdio.h>
+
+int main(void) 
+{
+    int a[10][10],b[10][10],r,c;
+
+    scanf("%d %d", &r, &c);
+
+    for (int i=0; i<r; i++)
+        for (int j=0; j<c; j++)
+            scanf("%d", &a[i][j]);
+
+    for (int i=0; i<r; i++)
+        for (int j=0; j<c; j++)
+            scanf("%d",&b[i][j]);
+
+    for (int i=0; i<r; i++) 
+    {
+        for (int j=0; j<c; j++)
+            printf("%d ", a[i][j]+b[i][j]);
+
+        printf("\n");
+    }
+
+    return 0;
+}  
+
+Q76: Check if a matrix is symmetric.
+
+#include <stdio.h>
+
+int main(void)
+{
+    int a[10][10], n, symmetric = 1;
+
+    scanf("%d", &n);
+
+    for (int i = 0; i < n; i++)
+        for (int j = 0; j < n; j++)
+            scanf("%d", &a[i][j]);
+
+    for (int i = 0; i < n; i++)
+        for (int j = i + 1; j < n; j++)
+            if (a[i][j] != a[j][i])
+                symmetric = 0;
+
+    if (symmetric)
+        printf("Symmetric matrix");
+    else
+        printf("Not a symmetric matrix");
+
+    return 0;
+}  
